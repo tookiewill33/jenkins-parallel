@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('version control'){
 			steps{
-				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'cicd', url: 'https://github.com/tookiewill33/jenkins-parallel.git']]) 
+				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'cicd', url: 'https://github.com/tookiewill33/jenkins-parallel.git']])
 			}
 		}
 		stage('parallel-build'){
@@ -16,6 +16,11 @@ pipeline{
 				stage('subtage-2'){
 					steps{
 						echo 'action 2'
+					}
+				}
+				stage('substage-3'){
+					steps{
+						echo 'action 3'
 					}
 				}
 			}
