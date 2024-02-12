@@ -13,7 +13,7 @@ pipeline{
 						echo 'action'
 					}
 				}
-				stage('subtage-1'){
+				stage('subtage-2'){
 					steps{
 						echo 'action 2'
 					}
